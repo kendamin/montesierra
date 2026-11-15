@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Montesierra Dormitory · Rooms near CSU, Ampayon, Butuan City</title>
+<meta name="description" content="Newly opened dormitory in P3 Ampayon, Butuan City, a 10-minute walk from the CSU Green Gate. Air-conditioned rooms for three with own CR, balcony, free water and Wi-Fi. ₱12,000 per room, per month.">
+<meta property="og:title" content="Montesierra Dormitory · 10 minutes from CSU Green Gate">
+<meta property="og:description" content="Air-conditioned rooms for three with own CR and balcony. Free water and Wi-Fi. ₱12,000 per room, per month. Only 3 rooms left.">
+<meta property="og:image" content="assets/front.webp">
+<meta name="theme-color" content="#F3F5F2">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2317603F'/><path d='M5 23 L12 9 L16 16.5 L20 9 L27 23' fill='none' stroke='white' stroke-width='3' stroke-linejoin='round' stroke-linecap='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="scrollcraft.css">
+<style>
+  :root {
+    --sc-canvas:     #F3F5F2;
+    --sc-surface:    #FFFFFF;
+    --sc-ink:        #13201A;
+    --sc-ink-soft:   #4A5B52;
+    --sc-accent:     #17603F;
+    --sc-accent-ink: #F6FAF7;
+    --sc-font-display: "Outfit", system-ui, sans-serif;
+    --sc-font-text:    "Geist", system-ui, sans-serif;
+    --sc-shadow-color: 150 25% 18%;
+    --bar-h: 4.25rem;
+  }
+  body { overflow-x: clip; }
+  .sc-grain { opacity: 0.03; }
+
+  /* ---------- logo ---------- */
+  .logo { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--sc-ink); }
+  .logo svg { width: 2rem; height: 2rem; flex: none; }
+  .logo__word { display: grid; line-height: 1; }
+  .logo__name { font-family: var(--sc-font-display); font-weight: 600; font-size: 1.05rem; letter-spacing: 0.06em; }
+  .logo__sub { font-size: 0.62rem; letter-spacing: 0.32em; color: var(--sc-ink-soft); margin-top: 0.22rem; }
+
+  /* ---------- bar ---------- */
+  .bar {
+    position: fixed; inset: 0 0 auto 0; z-index: var(--sc-z-chrome);
+    height: var(--bar-h);
+    display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+    padding-inline: var(--sc-gutter);
+    background: color-mix(in oklab, var(--sc-canvas) 94%, transparent);
+    border-bottom: 1px solid var(--sc-hairline);
+  }
+  .bar nav { display: flex; align-items: center; gap: 1.75rem; }
+  .bar nav a:not(.btn) { text-decoration: none; font-size: var(--sc-t-sm); color: var(--sc-ink-soft); transition: color var(--sc-d-fast) var(--sc-ease-out); }
+  .bar nav a:not(.btn):hover { color: var(--sc-ink); }
+  @media (max-width: 760px) { .bar nav a:not(.btn) { display: none; } }
+
+  /* ---------- buttons ---------- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+    min-height: 2.75rem; padding: 0.7rem 1.25rem;
+    border-radius: var(--sc-r-md);
+    font-weight: 500; font-size: var(--sc-t-sm); white-space: nowrap;
+    text-decoration: none;
+    background: var(--sc-accent); color: var(--sc-accent-ink);
+    box-shadow: var(--sc-e1);
+    transition: background-color var(--sc-d-fast) var(--sc-ease-out), transform 120ms var(--sc-ease-out), box-shadow var(--sc-d-fast) var(--sc-ease-out);
+  }
+  .btn:hover { background: color-mix(in oklab, var(--sc-accent) 86%, black); box-shadow: var(--sc-e2); }
+  .btn:active { transform: translateY(1px) scale(0.98); }
+  .btn--ghost { background: transparent; color: var(--sc-ink); box-shadow: inset 0 0 0 1px var(--sc-hairline-strong); }
+  .btn--ghost:hover { background: color-mix(in oklab, var(--sc-ink) 6%, transparent); box-shadow: inset 0 0 0 1px var(--sc-ink-soft); }
+  .btn svg { width: 1.1em; height: 1.1em; }
+
+  /* ---------- hero ---------- */
+  .hero { min-height: 100svh; padding: calc(var(--bar-h) + var(--sc-7)) 0 var(--sc-7); display: grid; align-items: center; }
+  .hero__grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+  .hero h1 { max-width: 14ch; }
+  .hero .sc-lede { margin-top: var(--sc-5); max-width: 38ch; color: var(--sc-ink-soft); }
+  .hero__ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: var(--sc-6); }
+  .hero__left { font-size: var(--sc-t-sm); color: var(--sc-ink-soft); margin-top: var(--sc-5); display: flex; align-items: center; gap: 0.55rem; }
+  .hero__left strong { color: var(--sc-accent); font-weight: 600; }
+  .hero__left::before { content: ""; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--sc-accent); box-shadow: 0 0 0 4px color-mix(in oklab, var(--sc-accent) 18%, transparent); }
+
+  .hero__art { position: relative; height: min(76svh, 46rem); }
+  .plane { position: absolute; margin: 0; border-radius: var(--sc-r-lg); overflow: hidden; }
+  .plane img { width: 100%; height: 100%; object-fit: cover; max-width: none; }
+  .plane--back { right: 0; top: 0; width: 52%; height: 58%; box-shadow: var(--sc-e2); filter: saturate(0.9); }
+  .plane--front { left: 4%; bottom: 0; width: 56%; height: 88%; box-shadow: var(--sc-e3); outline: 6px solid var(--sc-canvas); }
+  .plane--front img { object-position: 50% 60%; }
+  .plane__tag {
+    position: absolute; left: 0.75rem; bottom: 0.75rem; padding: 0.35rem 0.6rem; border-radius: var(--sc-r-sm);
+    background: color-mix(in oklab, var(--sc-ink) 78%, transparent); color: #fff; font-size: var(--sc-t-xs);
+  }
+  @media (max-width: 860px) {
+    .hero { min-height: auto; padding-top: calc(var(--bar-h) + var(--sc-6)); }
+    .hero__grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: var(--sc-t-2xl); }
+    .hero__art { height: 26rem; }
+  }
+
+  /* ---------- tour (the peak) ---------- */
+  .tour { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: clamp(2rem, 6vw, 7rem); align-items: center;
+          height: 100%; padding: calc(var(--bar-h) + 1.5rem) var(--sc-gutter) 1.5rem; max-width: var(--sc-maxw); margin-inline: auto; }
+  .tour__side { max-width: 30rem; }
+  .tour__intro .sc-body { margin-top: var(--sc-3); }
+  .tour__frame { position: relative; height: min(calc(100svh - var(--bar-h) - 3rem), 52rem); aspect-ratio: 9 / 16;
+                 border-radius: var(--sc-r-lg); overflow: hidden; box-shadow: var(--sc-e3); background: #dfe5e0; }
+  .tour__frame .sc-scrim { display: none; }
+
+  .rail { list-style: none; margin: var(--sc-6) 0 0; padding: 0 0 0 1.25rem; position: relative; }
+  .rail::before, .rail::after { content: ""; position: absolute; left: 0.25rem; top: 0.6rem; bottom: 0.6rem; width: 2px; border-radius: 2px; }
+  .rail::before { background: var(--sc-hairline-strong); }
+  .rail::after { background: var(--sc-accent); transform-origin: 50% 0; transform: scaleY(var(--tour-f, 0)); }
+  .stop {
+    position: relative; display: block; width: 100%; text-align: left; cursor: pointer;
+    background: none; border: 0; padding: 0.42rem 0.5rem; border-radius: var(--sc-r-sm);
+    font-size: var(--sc-t-base); color: var(--sc-ink-soft);
+    transition: color var(--sc-d-fast) var(--sc-ease-out), background-color var(--sc-d-fast) var(--sc-ease-out);
+  }
+  .stop::before { content: ""; position: absolute; left: -1.3rem; top: 50%; width: 0.6rem; height: 0.6rem; margin-top: -0.3rem; border-radius: 50%;
+                  background: var(--sc-canvas); box-shadow: inset 0 0 0 2px var(--sc-hairline-strong); transition: background-color var(--sc-d-fast), box-shadow var(--sc-d-fast); }
+  .stop.is-past::before { background: var(--sc-accent); box-shadow: none; }
+  .stop[aria-current="step"] { color: var(--sc-ink); font-weight: 600; }
+  .stop[aria-current="step"]::before { background: var(--sc-accent); box-shadow: 0 0 0 4px color-mix(in oklab, var(--sc-accent) 22%, transparent); }
+  @media (hover: hover) and (pointer: fine) { .stop:hover { color: var(--sc-ink); background: color-mix(in oklab, var(--sc-ink) 5%, transparent); } }
+  .cap { margin-top: var(--sc-6); min-height: 7.5rem; padding-top: var(--sc-5); border-top: 1px solid var(--sc-hairline); }
+  .cap h3 { margin: 0; font-family: var(--sc-font-display); font-weight: 500; font-size: var(--sc-t-xl); letter-spacing: var(--sc-track-snug); line-height: 1.1; }
+  .cap p { margin: var(--sc-2) 0 0; color: var(--sc-ink-soft); max-width: 40ch; }
+  .cap.is-swap { animation: capIn 420ms var(--sc-ease-out); }
+  @keyframes capIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+  @media (max-width: 860px) {
+    .tour { display: block; padding: 0; }
+    .tour__frame { position: absolute; inset: 0; height: auto; aspect-ratio: auto; border-radius: 0; box-shadow: none; }
+    .tour__frame .sc-scrim { display: block; }
+    .tour__side { position: absolute; z-index: var(--sc-z-copy); inset: auto var(--sc-gutter) max(1.25rem, env(safe-area-inset-bottom)) var(--sc-gutter); max-width: none; }
+    .tour__intro { display: none; }
+    .rail { display: flex; gap: 0.35rem; padding: 0; margin: 0; }
+    .rail::before, .rail::after { display: none; }
+    .stop { flex: 1; height: 2.75rem; padding: 0; font-size: 0; color: transparent; border-radius: 0; }
+    .stop::before { left: 0; right: 0; top: 50%; width: auto; height: 4px; margin-top: -2px; border-radius: 4px; background: color-mix(in oklab, var(--sc-ink) 18%, transparent); box-shadow: none; }
+    .stop.is-past::before, .stop[aria-current="step"]::before { background: var(--sc-accent); box-shadow: none; }
+    .cap { margin-top: 0.25rem; min-height: 0; padding-top: 0; border: 0; }
+    .cap h3 { font-size: var(--sc-t-lg); }
+    .cap p { font-size: var(--sc-t-sm); color: var(--sc-ink); }
+  }
+
+  /* ---------- included ---------- */
+  .incl { padding-top: var(--sc-7); }
+  .incl__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(2.5rem, 6vw, 7rem); align-items: start; }
+  .incl__lead .sc-body { margin-top: var(--sc-5); }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: var(--sc-7); }
+  .pair figure { margin: 0; border-radius: var(--sc-r-md); overflow: hidden; aspect-ratio: 3 / 4; box-shadow: var(--sc-e2); }
+  .pair figure:nth-child(2) { margin-top: 2.5rem; }
+  .pair img { width: 100%; height: 100%; object-fit: cover; }
+  .group + .group { margin-top: var(--sc-7); }
+  .group h3 { margin: 0 0 var(--sc-3); font-size: var(--sc-t-sm); font-weight: 600; color: var(--sc-accent); letter-spacing: 0.02em; }
+  .group ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--sc-hairline); }
+  .group li { display: grid; grid-template-columns: 11rem 1fr; gap: 1rem; padding: 0.9rem 0; border-bottom: 1px solid var(--sc-hairline); }
+  .group li b { font-weight: 500; }
+  .group li span { color: var(--sc-ink-soft); }
+  @media (max-width: 860px) {
+    .incl__grid { grid-template-columns: 1fr; }
+    .group li { grid-template-columns: 1fr; gap: 0.15rem; }
+  }
+
+  /* ---------- rates ---------- */
+  .rates { display: grid; align-items: center; }
+  .rates__inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 6vw, 7rem); align-items: center; padding-top: var(--bar-h); }
+  .price { font-family: var(--sc-font-display); font-weight: 500; font-size: clamp(4rem, 2rem + 9vw, 10rem); line-height: 0.9; letter-spacing: -0.045em; margin: var(--sc-3) 0 0; }
+  .price small { font-size: 0.5em; letter-spacing: -0.02em; vertical-align: 0.55em; margin-right: 0.04em; }
+  .rates__per { font-size: var(--sc-t-lg); color: var(--sc-ink-soft); margin: var(--sc-4) 0 0; }
+  .rates__label { font-size: var(--sc-t-sm); font-weight: 600; color: var(--sc-accent); margin: 0; }
+  .terms { list-style: none; margin: 0; padding: 0; }
+  .terms li { padding: 1.1rem 0; border-top: 1px solid var(--sc-hairline); }
+  .terms li:last-child { border-bottom: 1px solid var(--sc-hairline); }
+  .terms b { display: block; font-family: var(--sc-font-display); font-weight: 500; font-size: var(--sc-t-xl); letter-spacing: var(--sc-track-snug); line-height: 1.15; }
+  .terms span { display: block; color: var(--sc-ink-soft); margin-top: 0.3rem; }
+  .terms .hot b { color: var(--sc-accent); }
+  @media (max-width: 860px) {
+    .rates__inner { grid-template-columns: 1fr; gap: var(--sc-5); }
+    .terms li { padding: 0.7rem 0; }
+    .terms b { font-size: var(--sc-t-lg); }
+    .terms span { font-size: var(--sc-t-sm); }
+  }
+
+  /* ---------- rules + location ---------- */
+  .where { padding-top: var(--sc-8); }
+  .where__grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(2.5rem, 6vw, 7rem); align-items: start; }
+  .map { margin: var(--sc-6) 0 0; border-radius: var(--sc-r-lg); overflow: hidden; box-shadow: var(--sc-e2); aspect-ratio: 4 / 3; background: #dfe5e0; }
+  .map iframe { width: 100%; height: 100%; border: 0; display: block; }
+  .where .btn { margin-top: var(--sc-5); }
+  .rules { list-style: none; margin: var(--sc-6) 0 0; padding: 0; counter-reset: r; }
+  .rules li { padding: 1.1rem 0; border-top: 1px solid var(--sc-hairline); }
+  .rules li:last-child { border-bottom: 1px solid var(--sc-hairline); }
+  .rules b { display: block; font-weight: 600; }
+  .rules span { display: block; color: var(--sc-ink-soft); margin-top: 0.25rem; max-width: 46ch; }
+  @media (max-width: 860px) { .where__grid { grid-template-columns: 1fr; } }
+
+  /* ---------- close ---------- */
+  .close {
+    --sc-ink: #F4F8F5; --sc-ink-soft: #C9DDD1; color: var(--sc-ink);
+    background: #134F35;
+    display: grid; grid-template-rows: 1fr auto;
+  }
+  .close::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(40rem 30rem at var(--sc-mx, 70%) var(--sc-my, 30%), color-mix(in oklab, #ffffff 9%, transparent), transparent 70%); }
+  .close__inner { align-self: center; padding: calc(var(--bar-h) + 1rem) var(--sc-gutter) 0; max-width: var(--sc-maxw); width: 100%; margin-inline: auto; position: relative; }
+  .close h2 { max-width: 16ch; }
+  .close .sc-body { margin-top: var(--sc-4); color: var(--sc-ink-soft); }
+  .contact { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: var(--sc-6); }
+  .close .btn { background: #F4F8F5; color: #0F3F2A; }
+  .close .btn:hover { background: #ffffff; }
+  .close .btn--ghost { background: transparent; color: var(--sc-ink); box-shadow: inset 0 0 0 1px color-mix(in oklab, #fff 40%, transparent); }
+  .close .btn--ghost:hover { background: color-mix(in oklab, #fff 10%, transparent); }
+  .close :focus-visible { outline-color: #F4F8F5; }
+  .foot { position: relative; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem 2rem; align-items: center;
+          padding: 1.25rem var(--sc-gutter) max(1.25rem, env(safe-area-inset-bottom)); border-top: 1px solid color-mix(in oklab, #fff 16%, transparent);
+          font-size: var(--sc-t-xs); color: var(--sc-ink-soft); }
+  .foot .logo { color: var(--sc-ink); }
+  .foot .logo__sub { color: var(--sc-ink-soft); }
+  @media (max-width: 860px) { .close h2 { font-size: var(--sc-t-2xl); } .contact .btn { flex: 1 1 auto; } }
+</style>
+</head>
+<body>
+
+<span data-sc-progress></span>
+<div class="sc-grain" aria-hidden="true"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mark" viewBox="0 0 32 32">
+    <rect width="32" height="32" rx="8" fill="#17603F"/>
+    <path d="M5 23 L12 9 L16 16.5 L20 9 L27 23" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<header class="bar">
+  <a class="logo" href="#top" aria-label="Montesierra Dormitory, back to top">
+    <svg aria-hidden="true"><use href="#mark"/></svg>
+    <span class="logo__word"><span class="logo__name">MONTESIERRA</span><span class="logo__sub">DORMITORY</span></span>
+  </a>
+  <nav aria-label="Main">
+    <a href="#tour">Tour</a>
+    <a href="#rates">Rates</a>
+    <a href="#location">Location</a>
+    <a class="btn" href="#inquire">Inquire now</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO: layered photos, copy at 1x -->
+  <section class="hero" data-sc-act="flow" data-sc-drift="#F3F5F2">
+    <div class="sc-wrap hero__grid">
+      <div>
+        <h1 class="sc-display sc-display--lg">A brand-new dorm, ten minutes from CSU.</h1>
+        <p class="sc-lede">Montesierra Dormitory in P3 Ampayon, Butuan City. Air-conditioned rooms for three, each with its own CR and balcony.</p>
+        <div class="hero__ctas">
+          <a class="btn" href="#inquire">Inquire now</a>
+          <a class="btn btn--ghost" href="#tour">Take the tour</a>
+        </div>
+        <p class="hero__left"><span>Newly opened. <strong>Only 3 rooms left.</strong></span></p>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <figure class="plane plane--back" data-sc-parallax="-1.4"><img src="assets/view.webp" alt=""></figure>
+        <figure class="plane plane--front" data-sc-parallax="0.5">
+          <img src="assets/front.webp" alt="">
+          <span class="plane__tag">P3 Ampayon, Butuan City</span>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOUR: the peak. Clip is mapped to pinned travel so the stop rail and the
+       frame stay in lockstep (the rail is navigation, it has to be exact). -->
+  <section id="tour" data-sc-act="scrub" data-sc-span="6.5" data-sc-clip-map="travel" data-sc-drift="#E8EDE9">
+    <div data-sc-stage>
+      <div class="tour">
+        <div class="tour__side">
+          <div class="tour__intro">
+            <h2 class="sc-display sc-display--md">Take the tour.</h2>
+            <p class="sc-body">Walk through Montesierra from the front gate to the balcony. Tap any stop to jump there.</p>
+          </div>
+          <ol class="rail" aria-label="Tour stops">
+            <li><button class="stop" data-t="0"     data-text="The front gate opens by keycard only, and CCTV watches the entrance and hallways.">Keycard gate</button></li>
+            <li><button class="stop" data-t="0.055" data-text="Bright, tiled hallways with lighted exit signs on every floor.">Hallways</button></li>
+            <li><button class="stop" data-t="0.195" data-text="One double-deck bed per room, foam already provided. A third roommate brings a folding bed.">Double-deck bed</button></li>
+            <li><button class="stop" data-t="0.26"  data-text="Wide stairs with steel handrails up to every floor.">Stairs</button></li>
+            <li><button class="stop" data-t="0.40"  data-text="Aircon on the room's own submeter, plus a closet with compartments so clothes never mix.">Your room</button></li>
+            <li><button class="stop" data-t="0.548" data-text="Every room opens to its own balcony, with fresh air and greenery.">Balcony</button></li>
+            <li><button class="stop" data-t="0.605" data-text="Your own toilet and sink inside the room. No queueing down the hall.">Own CR</button></li>
+            <li><button class="stop" data-t="0.66"  data-text="Upper floors look out over Ampayon toward the mountains.">Upper floors</button></li>
+          </ol>
+          <div class="cap" aria-live="off"><h3>Keycard gate</h3><p>The front gate opens by keycard only, and CCTV watches the entrance and hallways.</p></div>
+        </div>
+        <div class="tour__frame">
+          <img class="sc-stage__poster" src="assets/front.webp" alt="Montesierra Dormitory front gate">
+          <video data-sc-scrub data-sc-src="assets/tour.mp4" data-sc-src-mobile="assets/tour-m.mp4" muted playsinline aria-label="Walkthrough video of Montesierra Dormitory"></video>
+          <div class="sc-scrim sc-scrim--band" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INCLUDED: ordinary document, it reads like a list because it is one -->
+  <section class="sc-section incl" id="included">
+    <div class="sc-wrap incl__grid">
+      <div class="incl__lead" data-sc-in>
+        <h2 class="sc-display sc-display--lg">Free water. Free Wi-Fi.</h2>
+        <p class="sc-body">Both come with the rent. Here is everything else you get at Montesierra.</p>
+        <div class="pair">
+          <figure data-sc-reveal="up" data-sc-reveal-at="0.12 0.5"><img src="assets/bunk.webp" width="720" height="1280" alt="Room with a double-deck bed and window"></figure>
+          <figure data-sc-reveal="up" data-sc-reveal-at="0.2 0.58"><img src="assets/cr.webp" width="720" height="1280" alt="Private CR with toilet, sink and towel rack"></figure>
+        </div>
+      </div>
+      <div data-sc-in data-sc-stagger="70">
+        <div class="group">
+          <h3>In every room</h3>
+          <ul>
+            <li><b>Aircon</b><span>On the room's own submeter, so you only pay for what your room uses.</span></li>
+            <li><b>Own CR and sink</b><span>Shared only with your roommates.</span></li>
+            <li><b>Closet</b><span>With compartments, so everyone's clothes stay separate.</span></li>
+            <li><b>Bed foam</b><span>Provided on the double-deck bed.</span></li>
+            <li><b>Balcony</b><span>Fresh air and a view.</span></li>
+          </ul>
+        </div>
+        <div class="group">
+          <h3>Shared spaces</h3>
+          <ul>
+            <li><b>Common kitchen</b><span>Cook your own meals.</span></li>
+            <li><b>Washing area</b><span>For dishes and laundry.</span></li>
+            <li><b>Sampayan</b><span>A clothesline area for drying.</span></li>
+          </ul>
+        </div>
+        <div class="group">
+          <h3>Safety</h3>
+          <ul>
+            <li><b>Keycard gate</b><span>Only residents can open the gate.</span></li>
+            <li><b>CCTV</b><span>Cameras around the building.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RATES: the frame holds while the terms arrive -->
+  <section id="rates" data-sc-act="pin" data-sc-span="2.2" data-sc-drift="#F3F5F2">
+    <div data-sc-stage class="rates">
+      <div class="sc-wrap rates__inner">
+        <div>
+          <p class="rates__label">Monthly rent</p>
+          <p class="price"><small>₱</small>12,000</p>
+          <p class="rates__per">per room, per month. Good for 3.</p>
+        </div>
+        <ul class="terms">
+          <li data-sc-cue="0.02 1 0.14 0"><b>₱4,000 each</b><span>when the room is shared by three.</span></li>
+          <li data-sc-cue="0.2 1 0.14 0"><b>1 month advance + 1 month deposit</b><span>to move in (₱24,000 total).</span></li>
+          <li data-sc-cue="0.38 1 0.14 0"><b>Electricity by submeter</b><span>Each room has its own meter. Water and Wi-Fi are free.</span></li>
+          <li class="hot" data-sc-cue="0.56 1 0.14 0"><b>Only 3 rooms left</b><span>Reserve early for the coming semester.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- RULES + LOCATION -->
+  <section class="sc-section where" id="location">
+    <div class="sc-wrap where__grid">
+      <div data-sc-in>
+        <h2 class="sc-display sc-display--md">Ten minutes on foot to the CSU Green Gate.</h2>
+        <p class="sc-body" style="margin-top: var(--sc-4)">P3 Ampayon, Butuan City. Close enough to walk to class every day.</p>
+        <figure class="map" data-sc-reveal="left" data-sc-reveal-at="0.1 0.5">
+          <iframe title="Map showing Montesierra Dormitory in Ampayon, Butuan City" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                  src="https://maps.google.com/maps?q=8.957302,125.6012081&z=17&output=embed"></iframe>
+        </figure>
+        <a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&destination=8.957302,125.6012081" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          Get directions
+        </a>
+      </div>
+      <div data-sc-in>
+        <h2 class="sc-display sc-display--md">House rules</h2>
+        <ul class="rules">
+          <li><b>Curfew is at 10:00 PM.</b><span>All residents are expected to be inside the dormitory by 10:00 PM.</span></li>
+          <li><b>Quiet hours begin at 10:00 PM.</b><span>Residents are kindly asked to keep noise to a minimum out of respect for others.</span></li>
+          <li><b>Open to all genders.</b><span>Both male and female residents are welcome.</span></li>
+          <li><b>Move-in terms.</b><span>One month advance and one month deposit are required upon move-in.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSE: last element, green plate, holds -->
+  <section id="inquire" data-sc-act="pin" data-sc-span="1.25">
+    <div data-sc-stage class="close" data-sc-spotlight>
+      <div class="close__inner">
+        <h2 class="sc-display sc-display--lg" data-sc-cue="0 1 0 0">Reserve your room before they're gone.</h2>
+        <p class="sc-body" data-sc-cue="0 1 0 0">Call, text or email us to ask questions or schedule a visit.</p>
+        <div class="contact" data-sc-cue="0 1 0 0">
+          <a class="btn" href="tel:+639917931819" data-sc-magnet="0.26" data-sc-rise="0">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            Call 0991 793 1819
+          </a>
+          <a class="btn btn--ghost" href="sms:+639917931819">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Send a text
+          </a>
+          <a class="btn btn--ghost" href="mailto:kenabudava@gmail.com?subject=Montesierra%20Dormitory%20inquiry">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+            Email us
+          </a>
+          <!-- MESSENGER: add the Facebook link, then remove the comment markers.
+          <a class="btn btn--ghost" href="https://m.me/YOUR-PAGE-OR-USERNAME" target="_blank" rel="noopener">Message on Messenger</a>
+          -->
+        </div>
+      </div>
+      <footer class="foot">
+        <a class="logo" href="#top" aria-label="Montesierra Dormitory, back to top">
+          <svg aria-hidden="true"><use href="#mark"/></svg>
+          <span class="logo__word"><span class="logo__name">MONTESIERRA</span><span class="logo__sub">DORMITORY</span></span>
+        </a>
+        <span>P3 Ampayon, Butuan City · near the CSU Green Gate</span>
+        <span>kenabudava@gmail.com · 0991 793 1819</span>
+      </footer>
+    </div>
+  </section>
+
+</main>
+
+<script src="scrollcraft.js"></script>
+<script>ScrollCraft.mount(document.body);</script>
+<script>
+/* Signature move: the tour-stop rail. It reads the video's real playhead, so
+   the highlighted stop is always the frame on screen, and every stop is a
+   button that scrolls the tour to that moment. */
+(function () {
+  var act = document.getElementById('tour');
+  var video = act.querySelector('video');
+  var stops = Array.prototype.slice.call(act.querySelectorAll('.stop'));
+  var ts = stops.map(function (b) { return parseFloat(b.getAttribute('data-t')); });
+  var cap = act.querySelector('.cap');
+  var capH = cap.querySelector('h3'), capP = cap.querySelector('p');
+  var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cur = -1;
+
+  /* The clip is mapped to pinned travel (data-sc-clip-map="travel"), so every
+     stop is a frame the visitor sees with the stage fully in view. */
+  function geom() {
+    var start = act.getBoundingClientRect().top + scrollY;
+    return { start: start, len: Math.max(act.offsetHeight - innerHeight, 1) };
+  }
+  function frac() {
+    var d = video.duration;
+    if (d && isFinite(d) && video.readyState >= 1 && !reduced) return video.currentTime / d;
+    var g = geom();
+    return Math.min(1, Math.max(0, (scrollY - g.start) / g.len));
+  }
+  function set(i) {
+    if (i === cur) return;
+    cur = i;
+    stops.forEach(function (b, k) {
+      b.setAttribute('aria-current', k === i ? 'step' : 'false');
+      b.classList.toggle('is-past', k < i);
+    });
+    capH.textContent = stops[i].textContent;
+    capP.textContent = stops[i].getAttribute('data-text');
+    cap.classList.remove('is-swap'); void cap.offsetWidth; cap.classList.add('is-swap');
+  }
+  function tick() {
+    var r = act.getBoundingClientRect();
+    if (r.bottom > -innerHeight && r.top < innerHeight * 2) {
+      var f = frac();
+      act.style.setProperty('--tour-f', f.toFixed(4));
+      var i = 0;
+      for (var k = 0; k < ts.length; k++) if (f + 0.002 >= ts[k]) i = k;
+      set(i);
+    }
+    requestAnimationFrame(tick);
+  }
+  stops.forEach(function (b, k) {
+    b.addEventListener('click', function () {
+      var g = geom();
+      var target = k === 0 ? 0 : ts[k] + 0.012;
+      window.scrollTo({ top: g.start + target * g.len + 1, behavior: reduced ? 'auto' : 'smooth' });
+    });
+  });
+  set(0);
+  requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
